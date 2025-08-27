@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>First Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<script>
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+
+<body>
+
+  <!-- =========================
+       Navbar
+  ========================== -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo"><img src="logo.jpg.jpeg" alt="NayaSafar logo"></a>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- =========================
+       Intro (Tagline + Search)
+  ========================== -->
+  <section class="intro">
+    <p class="tagline">Your journey towards healing starts here 🌱</p>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search therapist by city or topic..." />
+      <button>Search</button>
+    </div>
+  </section>
+  <!--==============
+ search categories
+ ================= -->
+  <div class="quick-categories">
+    <h3>Popular Searches</h3>
+    <div class="categories-grid">
+      <button>Stress Management</button>
+      <button>Depression</button>
+      <button>Relationship Issues</button>
+      <button>Work Burnout</button>
+      <button>Therapists in Karachi</button>
+      <button>Therapists in Lahore</button>
+    </div>
+  </div>
+  <div class="illustration container">
+  <img src="doctor.png.jpeg" alt="Doctor consultation illustration">
+</div>
+
+  <!-- =========================
+       Hero Section
+  ========================== -->
+  <section class="hero">
+    <div class="container">
+      <h1>Mental Health Services</h1>
+      <p>
+        Our mental health services are designed to provide compassionate support, guidance,
+        and care for individuals facing emotional, psychological, or behavioral challenges.
+        We offer counseling, therapy, and wellness programs tailored to meet personal needs,
+        helping you build resilience and reduce stress.
+      </p>
+      <div class="buttons">
+        <button class="btn btn-primary">Book Free Session</button>
+        <button class="btn btn-secondary">Learn More</button>
+      </div>
+    </div>
+  </section>
+  <!-- =========================
+       Features / Why Choose Us
+  ========================== -->
+  <section class="features container">
+    <h2 class="section-heading">Why Choose NayaSafar?</h2>
+    <p class="section-sub">We provide trusted, confidential, and easily accessible mental health support.</p>
+
+    <div class="card-grid">
+      <article class="card">
+        <h3>Anonymous Chat</h3>
+        <p>Ask questions safely — no sign up needed.</p>
+      </article>
+
+      <article class="card">
+        <h3>Find a Therapist</h3>
+        <p>Filter by city, language, and budget.</p>
+      </article>
+
+      <article class="card">
+        <h3>Self-Help Guides</h3>
+        <p>Doctor-reviewed guides for stress & anxiety.</p>
+      </article>
+
+      <article class="card">
+        <h3>Free Resources</h3>
+        <p>Access blogs, videos, and tools to improve your well-being.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- =========================
+       Footer
+  ========================== -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 NayaSafar — All sessions are confidential · help@nayasarfar.pk</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
