@@ -1,126 +1,187 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>First Project</title>
+  <title>Naya Safar — Mental Health & Wellbeing</title>
+  <meta name="description" content="Naya Safar - Professional, responsive mental health website template with a calming green design." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<script>
-  window.addEventListener("scroll", function () {
-    const navbar = document.querySelector(".navbar");
-    if (window.scrollY > 50) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-  });
-</script>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- =========================
-       Navbar
-  ========================== -->
-  <nav class="navbar">
-    <div class="container nav-inner">
-      <a href="#" class="logo"><img src="logo.jpg.jpeg" alt="NayaSafar logo"></a>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Resources</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+  <!-- =====================
+       Header + Navbar
+  ====================== -->
+  <header>
+    <div class="container nav" aria-label="Primary">
+      <a class="brand" href="#home">
+        <div class="logo">
+          <span class="leaf"></span>
+          <span class="leaf right"></span>
+        </div>
+        <div>
+          <strong>Naya Safar</strong><br>
+          <span class="slogan-small">Your New Journey Towards Healing</span>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <!-- =========================
-       Intro (Tagline + Search)
-  ========================== -->
-  <section class="intro">
-    <p class="tagline">Your journey towards healing starts here 🌱</p>
-
-    <div class="search-bar">
-      <input type="text" placeholder="Search therapist by city or topic..." />
-      <button>Search</button>
-    </div>
-  </section>
-  <!--==============
- search categories
- ================= -->
-  <div class="quick-categories">
-    <h3>Popular Searches</h3>
-    <div class="categories-grid">
-      <button>Stress Management</button>
-      <button>Depression</button>
-      <button>Relationship Issues</button>
-      <button>Work Burnout</button>
-      <button>Therapists in Karachi</button>
-      <button>Therapists in Lahore</button>
-    </div>
-  </div>
-  <div class="illustration container">
-  <img src="doctor.png.jpeg" alt="Doctor consultation illustration">
-</div>
-
-  <!-- =========================
+  <!-- =====================
        Hero Section
-  ========================== -->
-  <section class="hero">
-    <div class="container">
-      <h1>Mental Health Services</h1>
-      <p>
-        Our mental health services are designed to provide compassionate support, guidance,
-        and care for individuals facing emotional, psychological, or behavioral challenges.
-        We offer counseling, therapy, and wellness programs tailored to meet personal needs,
-        helping you build resilience and reduce stress.
-      </p>
-      <div class="buttons">
-        <button class="btn btn-primary">Book Free Session</button>
-        <button class="btn btn-secondary">Learn More</button>
+  ====================== -->
+  <main id="main">
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="tag">Now accepting clients</span>
+          <h1 class="headline">Care for your mind, support for your journey.</h1>
+          <p class="hero-slogan">✨ Your New Journey Towards Healing ✨</p>
+          <p class="sub">Confidential, compassionate mental health support. Evidence-based care for anxiety, depression, stress, and more — accessible online and in-person.</p>
+          <div class="cta-row">
+            <a class="btn" href="#contact">Book a free consult</a>
+            <a class="btn secondary" href="#resources">Browse resources</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================
+         Services
+    ====================== -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Counseling</h3>
+            <p>One-on-one sessions to help manage stress, anxiety, and depression with professional guidance.</p>
+          </div>
+          <div class="card">
+            <h3>Therapy</h3>
+            <p>Evidence-based therapy approaches to help you process emotions and build resilience.</p>
+          </div>
+          <div class="card">
+            <h3>Workshops</h3>
+            <p>Interactive group sessions on mindfulness, self-care, and emotional wellbeing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================
+         Resources
+    ====================== -->
+    <section id="resources" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Resources</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Self-Help Guides</h3>
+            <p>Download free resources for managing everyday mental health challenges.</p>
+          </div>
+          <div class="card">
+            <h3>Blog</h3>
+            <p>Read insightful articles on wellbeing, personal growth, and coping strategies.</p>
+          </div>
+          <div class="card">
+            <h3>Hotlines</h3>
+            <p>Access local and international helplines for immediate support in times of crisis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================
+         FAQ
+    ====================== -->
+    <section id="faq" class="section">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Is therapy confidential?</summary>
+            <p>Yes, everything you share is kept private unless there’s a risk of harm to yourself or others.</p>
+          </details>
+          <details>
+            <summary>Do you offer online sessions?</summary>
+            <p>Yes, we provide both in-person and online counseling to ensure accessibility.</p>
+          </details>
+          <details>
+            <summary>How do I book a session?</summary>
+            <p>You can use the contact form below, and we’ll get back to you within 24 hours.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================
+         Contact
+    ====================== -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================
+       Footer
+  ====================== -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="#home">
+          <div class="logo">
+            <span class="leaf"></span>
+            <span class="leaf right"></span>
+          </div>
+          <div>
+            <strong>Naya Safar</strong><br>
+            <span class="small">Care for your mind.</span>
+          </div>
+        </a>
+        <p class="small" style="margin-top:.8rem; max-width: 55ch;">Naya Safar provides mental health education and therapy services. This site does not replace professional medical advice. If you’re in crisis, contact local emergency services.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+        <p class="small" style="margin-top:1rem;">© <span id="year">2025</span> Naya Safar.</p>
       </div>
     </div>
-  </section>
-  <!-- =========================
-       Features / Why Choose Us
-  ========================== -->
-  <section class="features container">
-    <h2 class="section-heading">Why Choose NayaSafar?</h2>
-    <p class="section-sub">We provide trusted, confidential, and easily accessible mental health support.</p>
-
-    <div class="card-grid">
-      <article class="card">
-        <h3>Anonymous Chat</h3>
-        <p>Ask questions safely — no sign up needed.</p>
-      </article>
-
-      <article class="card">
-        <h3>Find a Therapist</h3>
-        <p>Filter by city, language, and budget.</p>
-      </article>
-
-      <article class="card">
-        <h3>Self-Help Guides</h3>
-        <p>Doctor-reviewed guides for stress & anxiety.</p>
-      </article>
-
-      <article class="card">
-        <h3>Free Resources</h3>
-        <p>Access blogs, videos, and tools to improve your well-being.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- =========================
-       Footer
-  ========================== -->
-  <footer class="footer">
-    <div class="container">
-      <p>© 2025 NayaSafar — All sessions are confidential · help@nayasarfar.pk</p>
-    </div>
   </footer>
-
 </body>
-
 </html>
