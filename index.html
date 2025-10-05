@@ -1,6 +1,5 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,13 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- =====================
-       Header + Navbar
-  ====================== -->
+  <!-- Header -->
   <header>
     <div class="container nav" aria-label="Primary">
       <a class="brand" href="#home">
@@ -40,11 +36,10 @@
     </div>
   </header>
 
-  <!-- =====================
-       Hero Section
-  ====================== -->
+  <!-- Hero Section -->
   <main id="main">
     <section id="home" class="hero">
+      <div class="overlay"></div>
       <div class="container hero-grid">
         <div>
           <span class="tag">Now accepting clients</span>
@@ -52,16 +47,14 @@
           <p class="hero-slogan">✨ Your New Journey Towards Healing ✨</p>
           <p class="sub">Confidential, compassionate mental health support. Evidence-based care for anxiety, depression, stress, and more — accessible online and in-person.</p>
           <div class="cta-row">
-            <a class="btn" href="#contact">Book a free consult</a>
-            <a class="btn secondary" href="#resources">Browse resources</a>
+            <a class="btn" href="#contact" aria-label="Book a free consultation">Book a free consult</a>
+            <a class="btn secondary" href="#resources" aria-label="Browse helpful resources">Browse resources</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- =====================
-         Services
-    ====================== -->
+    <!-- Services Section -->
     <section id="services" class="section">
       <div class="container">
         <h2 class="section-title">Our Services</h2>
@@ -78,13 +71,31 @@
             <h3>Workshops</h3>
             <p>Interactive group sessions on mindfulness, self-care, and emotional wellbeing.</p>
           </div>
+          <div class="card">
+            <h3>Anxiety</h3>
+            <p>Understand and manage the symptoms of anxiety through personalized strategies and support.</p>
+          </div>
+          <div class="card">
+            <h3>Hyperactivity</h3>
+            <p>Guidance and resources to help individuals manage hyperactive behavior effectively.</p>
+          </div>
+          <div class="card">
+            <h3>Addiction</h3>
+            <p>Support for overcoming addiction through therapy, education, and coping techniques.</p>
+          </div>
+          <div class="card">
+            <h3>Depression</h3>
+            <p>Compassionate care to help individuals navigate and recover from depression.</p>
+          </div>
+          <div class="card">
+            <h3>Mental Illness</h3>
+            <p>Comprehensive mental health support to manage various mental health conditions.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- =====================
-         Resources
-    ====================== -->
+    <!-- Resources -->
     <section id="resources" class="section alt">
       <div class="container">
         <h2 class="section-title">Resources</h2>
@@ -105,9 +116,7 @@
       </div>
     </section>
 
-    <!-- =====================
-         FAQ
-    ====================== -->
+    <!-- FAQ -->
     <section id="faq" class="section">
       <div class="container">
         <h2 class="section-title">Frequently Asked Questions</h2>
@@ -128,9 +137,7 @@
       </div>
     </section>
 
-    <!-- =====================
-         Contact
-    ====================== -->
+    <!-- Contact -->
     <section id="contact" class="section alt">
       <div class="container">
         <h2 class="section-title">Contact Us</h2>
@@ -144,9 +151,7 @@
     </section>
   </main>
 
-  <!-- =====================
-       Footer
-  ====================== -->
+  <!-- Footer -->
   <footer>
     <div class="container footer-grid">
       <div>
@@ -160,7 +165,7 @@
             <span class="small">Care for your mind.</span>
           </div>
         </a>
-        <p class="small" style="margin-top:.8rem; max-width: 55ch;">Naya Safar provides mental health education and therapy services. This site does not replace professional medical advice. If you’re in crisis, contact local emergency services.</p>
+        <p class="small">Naya Safar provides mental health education and therapy services. This site does not replace professional medical advice. If you’re in crisis, contact local emergency services.</p>
       </div>
       <nav aria-label="Footer">
         <h4>Explore</h4>
@@ -179,9 +184,31 @@
           <li><a href="#">Instagram</a></li>
           <li><a href="#">LinkedIn</a></li>
         </ul>
-        <p class="small" style="margin-top:1rem;">© <span id="year">2025</span> Naya Safar.</p>
+        <p class="small">© <span id="year">2025</span> Naya Safar.</p>
       </div>
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Auto update footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Contact form alert
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Thank you for your message! We will get back to you shortly.');
+      form.reset();
+    });
+  </script>
 </body>
 </html>
